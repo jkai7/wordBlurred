@@ -1,0 +1,11 @@
+body{
+  background-image: linear-gradient(to right, #662D8C, #ED1E79);
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+}
+
+.flash-card{
+  height: 50%;
+  width: 50%;
+  background-color: white;
+}
