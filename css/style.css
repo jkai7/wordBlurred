@@ -3,12 +3,3 @@ body{
   font-family: 'Ubuntu', sans-serif;
   font-style: italic;
 }
-
-.flash-card{
-  height: 50%;
-  width: 50%;
-  background-color: white;
-}
-
-
-radial-gradient(circle at center, #662D8C, #ED1E79)
