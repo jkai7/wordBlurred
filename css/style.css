@@ -66,7 +66,7 @@ body{
 
 .input-section{
   background: #F8E71C;
-  border: 5px solid #E5D519;
+  box-shadow: 0 0 0 5px #E5D519 inset;
   height: 20vh;
 }
 
