@@ -6,5 +6,5 @@ function Game () {
 
 Game.prototype.pickRandom = function () {
   var randomWord = this.availableWords[Math.floor(Math.random() * this.availableWords.length)];
-  console.log(randomWord);
+  $('.flash-card').html(randomWord);
 };
