@@ -6,7 +6,6 @@ var strikes = 0;
 
 function Game () {
 
-
 }
 
 Game.prototype.pickRandom = function () {
@@ -18,9 +17,16 @@ Game.prototype.checkInput = function () {
     this.strikes = 0;
     //console.log(input);
     if (input === randomWord){
-      console.log("yay!");
+      $('.flash-card').html("Correct!");
     } else {
       console.log("boo!");
       strikes += 1;
+      console.log(strikes);
     }
 };
+//
+// Game.prototype.gameOver = function () {
+//   if(strikes === 3) {
+//     alert("GAME OVER");
+//   }
+// };
