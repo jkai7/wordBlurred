@@ -91,7 +91,8 @@ body{
 }
 
 .strikes div img{
-  width: 100%
+  width: 100%;
+  display: none;
 }
 
 .flash-card{

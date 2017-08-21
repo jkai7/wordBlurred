@@ -2,9 +2,10 @@ var availableWords = ["testing", "randomization", "music", "cat", "there", "thei
 
 var randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
 
+var strikes = 0;
+
 function Game () {
 
- this.strikes = 0;
 
 }
 
@@ -14,10 +15,12 @@ Game.prototype.pickRandom = function () {
 
 Game.prototype.checkInput = function () {
     var input = $('.text-here').val().toLowerCase();
-    console.log(input);
+    this.strikes = 0;
+    //console.log(input);
     if (input === randomWord){
       console.log("yay!");
     } else {
       console.log("boo!");
+      strikes += 1;
     }
 };
