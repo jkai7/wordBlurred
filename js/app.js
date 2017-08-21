@@ -1,5 +1,5 @@
-var wordArray = [testing, randomization, music, cat, there, their];
+$(document).ready(function() {
+  var myGame = new Game();
+  myGame.pickRandom();
 
-$(document).ready( function () {
-  
 });
