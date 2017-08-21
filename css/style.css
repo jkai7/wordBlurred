@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%; 
+	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -67,7 +67,7 @@ body{
   font-size: 40px;
   text-align: center;
   font-style: italic;
-  padding: 20px;
+  padding: 30px;
 }
 
 .logo img{
@@ -130,8 +130,13 @@ body{
   background: -webkit-linear-gradient(top, #ffb300 0%,#ff9400 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #ffb300 0%,#ff9400 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb300', endColorstr='#ff9400',GradientType=0 ); /* IE6-9 */
-  height: 60px;
+  height: 64px;
   width: 60px;
+
+}
+
+.submit-input{
+  display: flex;
 }
 
 .submit .check-icon{

@@ -1,5 +1,5 @@
-// var myGame = new Count ();
-//
-// $(document).ready(function () {
-//   myGame.startGame();
-// });
+var wordArray = [testing, randomization, music, cat, there, their];
+
+$(document).ready( function () {
+  
+});
