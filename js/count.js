@@ -19,7 +19,7 @@ Game.prototype.checkInput = function () {
     if (input === randomWord){
       $('.flash-card').html("Correct!");
     } else {
-      console.log("boo!");
+      $('.flash-card').html("Wrong!");
       strikes += 1;
       console.log(strikes);
     }
