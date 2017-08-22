@@ -12,7 +12,7 @@ function Game () {
 
 Game.prototype.pickRandom = function () {
   randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
-  $('.flash-card').html(randomWord);
+  $('.flash-card').html(randomWord).addClass('blurred').removeClass('unblurred');
 };
 
 Game.prototype.checkInput = function () {
@@ -25,8 +25,8 @@ Game.prototype.checkInput = function () {
       $('.flash-card').html("Correct!");
       // this.pickRandom();
 
-      setTimeout(this.pickRandom, 1000);
-
+      setTimeout(this.pickRandom, 1500);
+      input = $('.text-here').val('');
       // var myThis = this;
       // setTimeout(function () {
       //   myThis.pickRandom();
@@ -48,7 +48,8 @@ Game.prototype.checkInput = function () {
     if(strikes === 3){
       alert("gameover!");
     } else {
-      setTimeout(this.pickRandom, 1000);
+      setTimeout(this.pickRandom, 1500);
+      input = $('.text-here').val('');
       //CONTINUE WITH GAME - DISPLAY NEXT WORD
     }
 
