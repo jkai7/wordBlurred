@@ -9,6 +9,7 @@ var strikes = 0;
 
 function Game () {
 
+
 }
 
 
@@ -29,6 +30,8 @@ Game.prototype.checkInput = function () {
       setTimeout(this.pickRandom, 1500);
       input = $('.text-here').val('');
 
+      console.log(numCorrect);
+
       // var myThis = this;
       // setTimeout(function () {
       //   myThis.pickRandom();
@@ -39,13 +42,12 @@ Game.prototype.checkInput = function () {
       strikes += 1;
       //DISPLAY WORD UNBLURRED?
 
-
-
+//SHIFT AROUND TO CORRECT AND MAKE RANDOM WORD UNBLUR BEFORE WRONG
 
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       $('.flash-card').html("Wrong!");
-      setTimeout(this.pickRandom, 1500);
+
       // $('.flash-card').html(randomWord).removeClass('blurred').addClass('unblurred');
       input = $('.text-here').val('');
     }
@@ -53,9 +55,11 @@ Game.prototype.checkInput = function () {
     console.log(strikes);
         if (strikes === 1) {
           $('.x-1').toggle();
+          setTimeout(this.pickRandom, 1500);
         }
         if (strikes === 2) {
           $('.x-2').toggle();
+          setTimeout(this.pickRandom, 1500);
         }
 
       if(strikes === 3){
