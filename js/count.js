@@ -25,6 +25,7 @@ Game.prototype.checkInput = function () {
       // this.pickRandom();
 
       setTimeout(this.pickRandom, 1500);
+      // $('.flash-card').html(randomWord).removeClass('blurred').addClass('unblurred');
       input = $('.text-here').val('');
       // var myThis = this;
       // setTimeout(function () {
@@ -38,16 +39,26 @@ Game.prototype.checkInput = function () {
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       $('.flash-card').html("Wrong!");
-      $('.x').toggle(); //ADD ONLY ONE AT A TIME ?**maybe use prepend/append?
+      $('.strikes:first-child').toggle(); //ADD ONLY ONE AT A TIME ?**maybe use prepend/append?
       //console.log(strikes);
-
-    }
+    //     if (strikes === 1 ) {
+    //       toggleClass(//firstone)
+    //     }
+    //     if (strikes === 2 ) {
+    //       toggleClass(//firstone)
+    //       toggleClass(//secondOne)
+    //     }
+    //
+    // }
     if(strikes === 3){
       $('.flash-card').html("Game Over!");
     } else {
       setTimeout(this.pickRandom, 1500);
+      // $('.flash-card').html(randomWord).removeClass('blurred').addClass('unblurred');
+
       input = $('.text-here').val('');
       //CONTINUE WITH GAME - DISPLAY NEXT WORD
     }
 
+}
 };
