@@ -9,7 +9,6 @@ function Game () {
 }
 
 
-
 Game.prototype.pickRandom = function () {
   randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
   $('.flash-card').html(randomWord).addClass('blurred').removeClass('unblurred');
@@ -33,8 +32,6 @@ Game.prototype.checkInput = function () {
       // }, 1000);
 
 
-      //MOVE TO NEXT WORD
-
     } else {
       strikes += 1;
       //DISPLAY WORD UNBLURRED
@@ -46,7 +43,7 @@ Game.prototype.checkInput = function () {
 
     }
     if(strikes === 3){
-      alert("gameover!");
+      $('.flash-card').html("Game Over!");
     } else {
       setTimeout(this.pickRandom, 1500);
       input = $('.text-here').val('');
