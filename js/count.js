@@ -38,6 +38,10 @@ Game.prototype.checkInput = function () {
     } else {
       strikes += 1;
       //DISPLAY WORD UNBLURRED?
+
+
+
+
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       $('.flash-card').html("Wrong!");

@@ -7,6 +7,8 @@ $(document).ready(function() {
     myGame.checkInput();
   });
 
+
+//CHANGE TO JQUERY FOR CONSISTENCY
   document.querySelector('input').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
