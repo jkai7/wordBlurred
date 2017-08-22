@@ -1,4 +1,4 @@
-var availableWords = ["testing", "randomization", "music", "cat", "there", "their"];
+var availableWords = ["testing", "randomization", "music", "cat", "there", "their", "texting", "more", "call"];
 
 var randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
 
@@ -18,10 +18,16 @@ Game.prototype.checkInput = function () {
     //console.log(input);
     if (input === randomWord){
       $('.flash-card').html("Correct!");
+      $('.flash-card').removeClass('blurred');
+      $('.flash-card').addClass('unblurred');
     } else {
       $('.flash-card').html("Wrong!");
       strikes += 1;
       console.log(strikes);
+      $('.x').toggle();
+      $('.flash-card').removeClass('blurred');
+      $('.flash-card').addClass('unblurred');
+
     }
 };
 //

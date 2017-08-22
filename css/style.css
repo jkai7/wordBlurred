@@ -95,7 +95,7 @@ body{
   display: none;
 }
 
-.flash-card{
+.flash-card.blurred{
   background: white;
   height: 200px;
   width: 400px;
@@ -109,7 +109,24 @@ body{
   text-transform: capitalize;
   color: transparent;
   text-shadow: 0 0 25px rgba(0,0,0,0.5);
+
 }
+
+.flash-card.unblurred{
+  background: white;
+  height: 200px;
+  width: 400px;
+  border: 5px solid #DCDCDC;
+  border-radius: 5px;
+  margin: 70px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-transform: capitalize;
+  color: black;
+}
+
 
 .input-section{
   background: #F8E71C;
