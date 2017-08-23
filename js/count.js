@@ -11,6 +11,8 @@ var strikes = 0;
 
 function Game () {
 
+  this.score = 0;
+
 
 }
 
@@ -26,17 +28,18 @@ Game.prototype.checkInput = function () {
     var input = $('.text-here').val().toLowerCase();
 
     if (input === randomWord){
+      console.log("score: " + this.score);
 
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       $('.flash-card').html("Correct!");
+      this.score += 1;
 
       input = $('.text-here').val('');
       $('.flash-card').toggleClass('slideInUp');
       $('.flash-card').toggleClass('slideOutDown');
       // $('.flash-card').toggleClass('slideOutDown');
       setTimeout(this.pickRandom, 1500);
-      console.log(numCorrect);
 
       // var myThis = this;
       // setTimeout(function () {
@@ -58,7 +61,7 @@ Game.prototype.checkInput = function () {
       input = $('.text-here').val('');
     }
 
-    console.log(strikes);
+    console.log("strikes: " + strikes);
         if (strikes === 1) {
           $('.x-1').toggle();
           setTimeout(this.pickRandom, 1500);
