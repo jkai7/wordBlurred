@@ -1,3 +1,5 @@
+//NEED TO ADD MORE WORDS
+
 var availableWords = ["testing", "where", "randomization", "music", "cat", "account",
 "ramification", "there", "their", "texting", "store", "more", "call", "effect", "affect",
 "mall", "fall", "minute", "amount", "accord", "evident", "intend", "concern", "issue", "tissue",
@@ -16,6 +18,8 @@ function Game () {
 Game.prototype.pickRandom = function () {
   randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
   $('.flash-card').html(randomWord).addClass('blurred').removeClass('unblurred');
+  $('.flash-card').removeClass('slideOutDown');
+  $('.flash-card').addClass('slideInUp');
 };
 
 Game.prototype.checkInput = function () {
@@ -27,9 +31,11 @@ Game.prototype.checkInput = function () {
       $('.flash-card').addClass('unblurred');
       $('.flash-card').html("Correct!");
 
-      setTimeout(this.pickRandom, 1500);
       input = $('.text-here').val('');
-
+      $('.flash-card').toggleClass('slideInUp');
+      $('.flash-card').toggleClass('slideOutDown');
+      // $('.flash-card').toggleClass('slideOutDown');
+      setTimeout(this.pickRandom, 1500);
       console.log(numCorrect);
 
       // var myThis = this;
@@ -56,15 +62,21 @@ Game.prototype.checkInput = function () {
         if (strikes === 1) {
           $('.x-1').toggle();
           setTimeout(this.pickRandom, 1500);
+          $('.flash-card').toggleClass('slideInUp');
+          $('.flash-card').toggleClass('slideOutDown');
         }
         if (strikes === 2) {
           $('.x-2').toggle();
           setTimeout(this.pickRandom, 1500);
+          $('.flash-card').toggleClass('slideInUp');
+          $('.flash-card').toggleClass('slideOutDown');
         }
 
       if(strikes === 3){
         $('.x-3').toggle();
         $('.flash-card').html("Game Over!");
+        $('.flash-card').toggleClass('slideInUp');
+        $('.flash-card').toggleClass('jackInTheBox');
       }
 
 };
