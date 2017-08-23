@@ -95,13 +95,20 @@ body{
   display: none;
 }
 
+p{
+  color: #F8E71C;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
 .flash-card.blurred{
   background: white;
   height: 200px;
   width: 400px;
   border: 5px solid #DCDCDC;
   border-radius: 5px;
-  margin: 70px auto 0 auto;
+  margin: 40px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +125,7 @@ body{
   width: 400px;
   border: 5px solid #DCDCDC;
   border-radius: 5px;
-  margin: 70px auto 0 auto;
+  margin: 40px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
