@@ -1,9 +1,9 @@
 //NEED TO ADD MORE WORDS
 
-var availableWords = ["testing", "where", "randomization", "music", "cat", "account",
-"ramification", "there", "their", "texting", "store", "more", "call", "effect", "affect",
+var availableWords = ["testing", "where", "randomization", "music", "bologna", "cat", "account",
+"ramification", "there", "their", "texting", "store", "more", "call", "onomatopoeia", "effect", "affect",
 "mall", "fall", "minute", "amount", "accord", "evident", "intend", "concern", "issue", "tissue",
-"establish", "utter", "udder", "passage", "massage", "floor"];
+"establish", "utter", "udder", "passage", "massage", "floor", "elephant", "rastafarian"];
 
 var randomWord;
 
