@@ -11,6 +11,9 @@ var strikes = 0;
 
 var score = 0;
 
+var goodJob = new Audio("./sounds/correctSound.wav");
+
+
 function Game () {
 
 
@@ -29,6 +32,7 @@ Game.prototype.checkInput = function () {
 
     if (input === randomWord){
       score += 1;
+      goodJob.play();
       console.log("your score: " + score);
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
