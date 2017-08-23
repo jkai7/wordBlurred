@@ -12,7 +12,7 @@ var strikes = 0;
 var score = 0;
 
 var goodJob = new Audio("./sounds/correctSound.wav");
-
+var noGood = new Audio("./sounds/wrong.wav");
 
 function Game () {
 
@@ -54,6 +54,7 @@ Game.prototype.checkInput = function () {
 
     } else {
       strikes += 1;
+      noGood.play();
       //DISPLAY WORD UNBLURRED?
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
