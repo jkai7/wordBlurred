@@ -18,7 +18,9 @@ $(document).ready(function() {
       // console.log("blergh");
 
     }
-});
 
+
+  });
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 });
