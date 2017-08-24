@@ -94,7 +94,7 @@ body{
   display: none;
 }
 
-p{
+.score{
   color: #F8E71C;
   font-size: 30px;
   text-align: center;

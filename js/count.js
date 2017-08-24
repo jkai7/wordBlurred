@@ -48,6 +48,7 @@ Game.prototype.checkInput = function () {
     if (input === randomWord){
       //Adds score
       score += 1;
+      $('.score').toggleClass('pulse');
       //Plays positive sound
       goodJob.play();
       //Removes blur from card
