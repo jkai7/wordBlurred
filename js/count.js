@@ -56,9 +56,9 @@ Game.prototype.checkInput = function () {
       strikes += 1;
       noGood.play();
       //DISPLAY WORD UNBLURRED?
-      $('.flash-card').removeClass('blurred');
+      $('.flash-card').html(randomWord).removeClass('blurred');
       $('.flash-card').addClass('unblurred');
-      $('.flash-card').html("Wrong!");
+      // $('.flash-card').html("Wrong!");
       input = $('.text-here').val('');
     }
 
