@@ -7,7 +7,7 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "theory", "range", "confer", "conifer", "wander", "wonder", "jubilant", "exciting", "invisible", "joke", "relaxed", "daring",
 "beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
 "pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
-"ancient", "feeling", "freeing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell",];
+"ancient", "feeling", "freeing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",];
 
 var randomWord;
 
@@ -18,6 +18,7 @@ var score = 0;
 var goodJob = new Audio("./sounds/correctSound.wav");
 var noGood = new Audio("./sounds/wrong.wav");
 var gameEnd = new Audio("./sounds/gameOver.wav");
+var whoosh = new Audio("./sounds/woosh.wav");
 
 function Game () {
 
@@ -28,6 +29,7 @@ function Game () {
 Game.prototype.pickRandom = function () {
   randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
   $('.flash-card').html(randomWord).addClass('blurred').removeClass('unblurred');
+  whoosh.play();
   $('.flash-card').removeClass('slideOutDown');
   $('.flash-card').addClass('slideInUp');
 };
