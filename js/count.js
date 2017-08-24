@@ -8,7 +8,8 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
 "pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
 "ancient", "feeling", "freezing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",
-"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", "squabble", "aggravate"];
+"compression", "compress", "impress", "obscure", "manor", "trend", "wound", "available", "squabble", "aggravate", "subtle",
+"sweet", "compassion"];
 
 //Game mechanic variables
 var randomWord;
@@ -32,11 +33,12 @@ Game.prototype.pickRandom = function () {
   randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
   //Removes previous "unblurred" class AND adds "blurred" class back when new random word one is chosen
   $('.flash-card').html(randomWord).addClass('blurred').removeClass('unblurred');
+  //"whoosh" sound that is played when card pops up
+    whoosh.play();
   //Makes card pop up when new word is chosen
   $('.flash-card').removeClass('slideOutDown');
   $('.flash-card').addClass('slideInUp');
-  //"whoosh" sound that is played when card pops up
-    whoosh.play();
+
 };
 
 
@@ -46,20 +48,19 @@ Game.prototype.checkInput = function () {
     var input = $('.text-here').val().toLowerCase();
     //If input is correct conditional
     if (input === randomWord){
+      //Plays positive sound
+      goodJob.play();
       //Adds score
       score += 1;
       $('.score').toggleClass('pulse');
-      //Plays positive sound
-      goodJob.play();
       //Removes blur from card
       $('.flash-card').removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       //Updates DOM of card to display "Correct!"
       $('.flash-card').html("Correct!");
       //Updates DOM with your score
-      $('p').html("Your score: " + score);
-      //Clears input in preparation of next card
-      input = $('.text-here').val('');
+      $('.score').html("Your score: " + score);
+
       //Animates the card going down
       $('.flash-card').removeClass('slideInUp');
       $('.flash-card').addClass('slideOutDown');
@@ -79,34 +80,37 @@ Game.prototype.checkInput = function () {
       $('.flash-card').html(randomWord).removeClass('blurred');
       $('.flash-card').addClass('unblurred');
       // $('.flash-card').html("Wrong!");
-      input = $('.text-here').val('');
+
+      // console.log(strikes);
+      //TODO: fix this
+      //YES I KNOW THIS SECTION IS HORRIBLE AND I NEED TO FIX IT :)
+      if (strikes === 1) {
+        noGood.play();
+        $('.x-1').toggle();
+        $('.x-1').toggleClass('flip');
+        setTimeout(this.pickRandom, 1500);
+        $('.flash-card').toggleClass('slideInUp');
+        $('.flash-card').toggleClass('slideOutDown');
+      }
+      if (strikes === 2) {
+        noGood.play();
+        $('.x-2').toggle();
+        $('.x-2').toggleClass('flip');
+        setTimeout(this.pickRandom, 1500);
+        $('.flash-card').toggleClass('slideInUp');
+        $('.flash-card').toggleClass('slideOutDown');
+      }
+
+      if(strikes === 3){
+        gameEnd.play();
+        $('.x-3').toggle();
+        $('.x-3').toggleClass('flip');
+        $('.flash-card').html("Game Over!");
+        $('.flash-card').toggleClass('slideInUp');
+        $('.flash-card').toggleClass('jackInTheBox');
+      }
     }
 
-    // console.log(strikes);
-        if (strikes === 1) {
-          noGood.play();
-          $('.x-1').toggle();
-          $('.x-1').toggleClass('flip');
-          setTimeout(this.pickRandom, 1500);
-          $('.flash-card').toggleClass('slideInUp');
-          $('.flash-card').toggleClass('slideOutDown');
-        }
-        if (strikes === 2) {
-          noGood.play();
-          $('.x-2').toggle();
-          $('.x-2').toggleClass('flip');
-          setTimeout(this.pickRandom, 1500);
-          $('.flash-card').toggleClass('slideInUp');
-          $('.flash-card').toggleClass('slideOutDown');
-        }
-
-        if(strikes === 3){
-          gameEnd.play();
-          $('.x-3').toggle();
-          $('.x-3').toggleClass('flip');
-          $('.flash-card').html("Game Over!");
-          $('.flash-card').toggleClass('slideInUp');
-          $('.flash-card').toggleClass('jackInTheBox');
-        }
-
+    //Clears input in preparation of next card
+    $('.text-here').val('');
 };
