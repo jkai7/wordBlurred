@@ -1,9 +1,13 @@
 //NEED TO ADD MORE WORDS
 
-var availableWords = ["testing", "where", "randomization", "music", "bologna", "cat", "account",
-"ramification", "there", "their", "texting", "store", "more", "call", "effect", "affect",
-"mall", "fall", "minute", "amount", "accord", "evident", "intend", "concern", "issue", "tissue",
-"establish", "utter", "udder", "passage", "massage", "floor", "elephant",];
+var availableWords = ["testing", "where", "randomization", "music", "bologna", "fancy", "concept", "cat", "account",
+"ramification", "there", "their", "passage", "texting", "store", "more", "call", "effect", "apparent", "property", "affect",
+"mall", "fall", "minute", "constitute", "institute", "amount", "accord", "evident", "intend", "concern", "issue", "tissue",
+"establish", "utter", "udder", "vain", "main", "passage", "massage", "floor", "elephant", "minor", "throne", "generate", "render",
+"theory", "range", "confer", "conifer", "wander", "wonder", "jubilant", "exciting", "invisible", "joke", "relaxed", "daring",
+"beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
+"pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
+"ancient", "feeling", "freeing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell",];
 
 var randomWord;
 
@@ -13,6 +17,7 @@ var score = 0;
 
 var goodJob = new Audio("./sounds/correctSound.wav");
 var noGood = new Audio("./sounds/wrong.wav");
+var gameEnd = new Audio("./sounds/gameOver.wav");
 
 function Game () {
 
@@ -54,7 +59,6 @@ Game.prototype.checkInput = function () {
 
     } else {
       strikes += 1;
-      noGood.play();
       //DISPLAY WORD UNBLURRED?
       $('.flash-card').html(randomWord).removeClass('blurred');
       $('.flash-card').addClass('unblurred');
@@ -64,12 +68,14 @@ Game.prototype.checkInput = function () {
 
     console.log(strikes);
         if (strikes === 1) {
+          noGood.play();
           $('.x-1').toggle();
           setTimeout(this.pickRandom, 1500);
           $('.flash-card').toggleClass('slideInUp');
           $('.flash-card').toggleClass('slideOutDown');
         }
         if (strikes === 2) {
+          noGood.play();
           $('.x-2').toggle();
           setTimeout(this.pickRandom, 1500);
           $('.flash-card').toggleClass('slideInUp');
@@ -77,6 +83,7 @@ Game.prototype.checkInput = function () {
         }
 
         if(strikes === 3){
+          gameEnd.play();
           $('.x-3').toggle();
           $('.flash-card').html("Game Over!");
           $('.flash-card').toggleClass('slideInUp');
