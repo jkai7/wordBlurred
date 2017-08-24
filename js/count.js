@@ -8,7 +8,7 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
 "pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
 "ancient", "feeling", "freezing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",
-"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", ];
+"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", "squabble"];
 
 //Game mechanic variables
 var randomWord;
