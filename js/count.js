@@ -7,7 +7,8 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "theory", "range", "confer", "conifer", "wander", "wonder", "jubilant", "exciting", "invisible", "joke", "relaxed", "daring",
 "beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
 "pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
-"ancient", "feeling", "freeing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",];
+"ancient", "feeling", "freeing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",
+"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", ];
 
 var randomWord;
 
