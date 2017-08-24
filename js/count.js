@@ -8,7 +8,7 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "beautiful", "daunting", "fun", "amazing", "inspire", "hack", "iron", "skill", "retro", "travel", "lazy", "jump", "mountain", "waxy",
 "pizza", "juicy", "puzzle", "muzzle", "piazza", "peep", "poop", "wallow", "willow", "noun", "noon", "pump", "divine", "gorgeous",
 "ancient", "feeling", "freezing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",
-"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", "squabble"];
+"compression", "compress", "impress", "obscures", "manor", "trend", "wound", "available", "squabble", "aggravate"];
 
 //Game mechanic variables
 var randomWord;
@@ -81,10 +81,11 @@ Game.prototype.checkInput = function () {
       input = $('.text-here').val('');
     }
 
-    console.log(strikes);
+    // console.log(strikes);
         if (strikes === 1) {
           noGood.play();
           $('.x-1').toggle();
+          $('.x-1').toggleClass('flip');
           setTimeout(this.pickRandom, 1500);
           $('.flash-card').toggleClass('slideInUp');
           $('.flash-card').toggleClass('slideOutDown');
@@ -92,6 +93,7 @@ Game.prototype.checkInput = function () {
         if (strikes === 2) {
           noGood.play();
           $('.x-2').toggle();
+          $('.x-2').toggleClass('flip');
           setTimeout(this.pickRandom, 1500);
           $('.flash-card').toggleClass('slideInUp');
           $('.flash-card').toggleClass('slideOutDown');
@@ -100,6 +102,7 @@ Game.prototype.checkInput = function () {
         if(strikes === 3){
           gameEnd.play();
           $('.x-3').toggle();
+          $('.x-3').toggleClass('flip');
           $('.flash-card').html("Game Over!");
           $('.flash-card').toggleClass('slideInUp');
           $('.flash-card').toggleClass('jackInTheBox');
