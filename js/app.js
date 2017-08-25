@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
 
 //creates new game object
