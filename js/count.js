@@ -13,7 +13,7 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "cascade", "object", "splash", "smash", "streptococcus", "dazzled", "periodic", "element", "eclipse", "waxing", "crescent", "scent",
 "liquid", "solid", "gas", "particle", "gimmick", "condense", "evaporate", "squirm", "onomatopoeia", "spicy", "example", "vivid",
 "quirky", "tickle", "sequel", "prequel", "perplex", "dizzy", "check", "input", "section", "yuck", "doozy", "happy", "qualify",
-"quantify"];
+"quantify", "common", "misconception"];
 
 //Game mechanic variables
 var randomWord;
