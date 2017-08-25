@@ -109,7 +109,7 @@ Game.prototype.checkInput = function () {
         $('.flash-card').toggleClass('slideInUp');
         $('.flash-card').toggleClass('jackInTheBox');
         $('.redoButton').removeClass('hidden').addClass('show');
-        $('.redoButton').toggleClass('fadeIn');
+        $('.redoButton').toggleClass('fadeInUp');
       }
     }
 
