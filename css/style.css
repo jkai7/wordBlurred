@@ -132,9 +132,13 @@ body{
   font-size: 53px;
   text-transform: capitalize;
   color: black;
-	animation-duration: 1.5s;
+	animation-duration: 3s;
 }
 
+.flash-card.unblurred.jackInTheBox{
+	animation-duration: 1s;
+	/*color: red;*/
+}
 
 .input-section{
   background: #F8E71C;
@@ -182,4 +186,34 @@ input{
 
 .submit .check-icon{
   width: 100%;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 500%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 200%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
 }
