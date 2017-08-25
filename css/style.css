@@ -137,7 +137,7 @@ body{
 
 .flash-card.unblurred.jackInTheBox{
 	animation-duration: 1s;
-	/*color: red;*/
+	/*color: #FF5454;*/
 }
 
 .input-section{
@@ -188,6 +188,24 @@ input{
   width: 100%;
 }
 
+.redoButton.hidden{
+	display: none;
+}
+
+.redoButton.show{
+	margin: 0 auto;
+	padding: 10px;
+	margin-top: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+	background-color: orange;
+	width: 150px;
+}
+
+
+/*ANIMATE.CSS SPEED AND LOCATION EDITING:*/
 @keyframes slideInUp {
   from {
     transform: translate3d(0, 500%, 0);

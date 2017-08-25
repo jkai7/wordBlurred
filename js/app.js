@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 
 //creates new game object
@@ -6,8 +8,13 @@ $(document).ready(function() {
   myGame.pickRandom();
 
 //calls checkInput prototype function at the press of button
-  $('button').click(function(){
+  $('.submit').click(function(){
     myGame.checkInput();
+  });
+
+  $('.redoButton').click(function(){
+    // myGame.pickRandom();
+    location.reload();
   });
 //CHANGE TO JQUERY FOR CONSISTENCY -- allows the ability to hit "enter" to submit - also calls checkInput
   document.querySelector('input').addEventListener('keypress', function (e) {
