@@ -179,6 +179,8 @@ input{
   width: 60px;
 	border: 1px solid black;
 	margin-left: -1px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 
 }
 
