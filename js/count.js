@@ -10,7 +10,7 @@ var availableWords = ["testing", "where", "randomization", "music", "bologna", "
 "ancient", "feeling", "freezing", "code", "anxious", "unlimited", "concrete", "scribble", "marble", "flour", "swell", "abundant",
 "compression", "compress", "impress", "obscure", "manor", "trend", "wound", "available", "squabble", "aggravate", "subtle",
 "sweet", "compassion", "juke", "aggressive", "princess", "immaculate", "art", "mother", "limp", "wobble", "plump", "count", "script",
-"cascade", "object", "splash", "smash", "streptococcus", "dazzled", "periodic", "element", "eclipse", "waxing", "crescent", "scent",
+"cascade", "object", "splash", "smash", "dazzled", "periodic", "element", "eclipse", "waxing", "crescent", "scent",
 "liquid", "solid", "gas", "particle", "gimmick", "condense", "evaporate", "squirm", "onomatopoeia", "spicy", "example", "vivid",
 "quirky", "tickle", "sequel", "prequel", "perplex", "dizzy", "check", "input", "section", "yuck", "doozy", "happy", "qualify",
 "quantify", "common", "misconception"];
